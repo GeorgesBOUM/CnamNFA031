@@ -63,7 +63,7 @@ public class Catalogue {
 	 */
 	public static double getPrix(int numProduit) {
 		// TODO Question 3.1
-		return 0;
+		return tabPrix[numProduit];
 	}
 
 	/**
