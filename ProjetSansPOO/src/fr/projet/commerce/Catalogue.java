@@ -51,7 +51,7 @@ public class Catalogue {
 	 */
 	public static String getNom(int numProduit) {
 		// TODO Question 3.1
-		return null;
+		return tabNoms[numProduit];
 	}
 
 	/**
