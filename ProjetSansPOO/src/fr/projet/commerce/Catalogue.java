@@ -71,6 +71,12 @@ public class Catalogue {
 	 */
 	public static void afficher() {
 		// TODO Question 3.2
+		int length = tabNoms.length;
+		System.out.println("--------------------------");
+		for (int i = 0; i < length; i++) {
+			System.out.println(tabNoms[i] + " = " + tabPrix[i] + "€");
+		}
+		System.out.println("--------------------------");
 	}
 
 	/**
