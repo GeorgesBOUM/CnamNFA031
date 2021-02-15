@@ -80,13 +80,13 @@ public class Catalogue {
 	}
 
 	/**
-	 * La m�thode <code>ajouter(String nom, double prix)</code> doit permettre
-	 * d'ajouter un nouveau produit � la structure de donn�es. Il faudra cr�er
+	 * La méthode <code>ajouter(String nom, double prix)</code> doit permettre
+	 * d'ajouter un nouveau produit à la structure de donées. Il faudra créer
 	 * deux tableaux, un pour les noms et un pour les prix avec une case de plus
 	 * que tabNoms et tabPrix. Puis, recopier le contenu de tabNoms et tabPrix
 	 * dans les nouveaux tableaux. Ensuite, il faudra ajouter le nom et le prix
-	 * du produit dans les derni�res cases des deux nouveaux tableaux. Enfin, il
-	 * faudra que tabNoms et tabPrix d�signent ces nouveaux tableaux.
+	 * du produit dans les dernières cases des deux nouveaux tableaux. Enfin, il
+	 * faudra que tabNoms et tabPrix désignent ces nouveaux tableaux.
 	 * 
 	 * @param nom
 	 *            le nom du nouveau produit
@@ -95,7 +95,18 @@ public class Catalogue {
 	 */
 	public static void ajouter(String nom, double prix) {
 		// TODO Question 3.3
-
+		int length = tabNoms.length;
+		String lesNoms[] = new String[length + 1];
+		double lesPrix[] = new double[length + 1];
+		
+		for (int i = 0; i < length; i++) {
+			lesNoms[i] = tabNoms[i];
+			lesPrix[i] = tabPrix[i];
+		}
+		lesNoms[length] = nom;
+		lesPrix[length] = prix;
+		tabNoms = lesNoms;
+		tabPrix = lesPrix;
 	}
 
 	/**
