@@ -22,21 +22,21 @@ public class Catalogue {
 		int styloBleu = chercher("Stylo bleu");
 		if (styloBleu != -1) {
 			System.out.println("Produit " + styloBleu + " : "
-					+ getNom(styloBleu) + " = " + getPrix(styloBleu) + "�");
+					+ getNom(styloBleu) + " = " + getPrix(styloBleu) + "€");
 		} else {
 			System.out.println("Pas de stylo bleu");
 		}
 		int classeur = chercher("Classeur A4");
 		if (classeur != -1) {
 			System.out.println("Produit " + classeur + " : " + getNom(classeur)
-					+ " = " + getPrix(classeur) + "�");
+					+ " = " + getPrix(classeur) + "€");
 		} else {
 			System.out.println("Pas de classeur A4");
 		}
 		int trousse = chercher("Trousse");
 		if (trousse != -1) {
 			System.out.println("Produit " + trousse + " : " + getNom(trousse)
-					+ " = " + getPrix(trousse) + "�");
+					+ " = " + getPrix(trousse) + "€");
 		} else {
 			System.out.println("Pas de trousse");
 		}
@@ -126,6 +126,14 @@ public class Catalogue {
 	 */
 	public static int chercher(String nom) {
 		// TODO Question 3.4
-		return -1;
+		int numero = -1;
+		int i = 0;
+		do {
+			if (tabNoms[i].equals(nom)) {
+				numero = i;
+			}
+			i++;
+		} while (numero == -1 && i < tabNoms.length);
+		return numero;
 	}
 }
