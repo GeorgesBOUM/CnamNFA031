@@ -36,21 +36,8 @@ public class Facture {
 	}
 
 	private static void ajouterProduit(int numFacture, int numProduit, int quantite) {
-		// TODO Question 4.3
-		int len = tabProduits[numFacture].length;
-		if (len == 0) {
-			tabProduits[numFacture][len] = numProduit;
-			tabQuantites[numFacture][len] = quantite;
-		} else {
-			tabProduits[numFacture][len - 1] = numProduit;
-			tabQuantites[numFacture][len - 1] = quantite;
-		}
-		
-		try {
-			
-		} catch (ArrayIndexOutOfBoundsException e) {
-			// TODO: handle exception
-		}	
+		listeProduits.get(numFacture).add(numProduit);
+		listeQuantites.get(numFacture).add(quantite);
 	}
 
 	/**
