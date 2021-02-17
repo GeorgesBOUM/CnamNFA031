@@ -29,7 +29,8 @@ public class Menu {
 				Catalogue.ajouter(nomNouveauProduit, prixNouveauProduit);
 				break;
 			case 3:
-				System.out.println("afficher catalogue");
+				System.out.println("Consulter le catalogue");
+				Catalogue.afficher();
 				break;
 			case 4:
 				System.out.println("afficher une facture");
