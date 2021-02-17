@@ -3,8 +3,8 @@ package fr.projet.commerce;
 public class Menu {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		afficheMenu();
+		
 	}
 	
 	public static void afficheMenu() {
@@ -21,7 +21,7 @@ public class Menu {
 	public void choixMenu(int choix) {
 		switch (choix) {
 		case 1:
-			System.out.println("affiche produit");
+			//afficheProduit(nom);
 			break;
 		case 2:
 			System.out.println("ajouter produit");
@@ -45,7 +45,13 @@ public class Menu {
 		}
 	}
 	
-	public void sortir() {
+	private void afficheProduit(String nom) {
+		int numProduit = Catalogue.chercher(nom);
+		System.out.println(
+				numProduit + " : " + nom + " --> " + Catalogue.getPrix(numProduit));
+	}
+	
+	private void sortir() {
 		System.out.println("Au revoir !!!");
 		System.exit(0);
 	}
