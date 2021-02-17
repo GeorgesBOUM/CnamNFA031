@@ -1,10 +1,13 @@
-package enonce;
+package fr.projet.commerce;
 
 public class Facture {
 	/*
-	 * Question 4.1 : Définir un facturier (voir sujet)
+	 * Question 4.1 : Dï¿½finir un facturier (voir sujet)
+	 * tab[i][j] : i --> facture et j --> ligne facture
 	 */
-
+	private static int tabProduits [][] = {};
+	private static int tabQuantites [][] = {};
+	
 	public static void main(String[] args) {
 		int numFacture = nouvelleFacture();
 		ajouterProduit(numFacture, 0, 10);
@@ -23,7 +26,25 @@ public class Facture {
 
 	private static int nouvelleFacture() {
 		// TODO Question 4.2
-		return 0;
+		int produits [][] = new int [tabProduits.length + 1][];
+		int quantites [][] = new int [tabQuantites.length + 1][];
+		if (tabProduits.length > 0) {
+			for (int i = 0; i < tabProduits.length; i++) {
+				for (int j = 0; j < tabProduits[i].length; j++) {
+					produits[i][j] = tabProduits[i][j];
+				}
+			}
+			for (int i = 0; i < tabQuantites.length; i++) {
+				for (int j = 0; j < tabQuantites[i].length; j++) {
+					quantites[i][j] = tabQuantites[i][j];
+				}
+			}
+			tabProduits = produits;
+			tabQuantites = quantites;
+		} else {
+			
+		}
+		return produits.length;
 	}
 
 	private static void ajouterProduit(int numFacture, int numProduit,
@@ -33,12 +54,12 @@ public class Facture {
 	}
 
 	/**
-	 * Affiche une facture avec son numéro, la liste des produits (nom du
-	 * produit, quantité, prix unitaire et prix total de la ligne), et le total
+	 * Affiche une facture avec son numï¿½ro, la liste des produits (nom du
+	 * produit, quantitï¿½, prix unitaire et prix total de la ligne), et le total
 	 * de la facture.
 	 * 
 	 * @param numFacture
-	 *            numéro de la facture
+	 *            numï¿½ro de la facture
 	 */
 	private static void afficherFacture(int numFacture) {
 		// TODO Question 4.4
