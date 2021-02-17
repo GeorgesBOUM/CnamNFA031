@@ -7,7 +7,7 @@ public class Facture {
 	 * Question 4.1 : D�finir un facturier (voir sujet)
 	 * tab[i][j] : i --> facture et j --> ligne facture
 	 */
-	private static ArrayList<Integer> listeFacturesArrayList = new ArrayList<Integer>();
+	
 	private static ArrayList<ArrayList<Integer>> listeProduits = new ArrayList<ArrayList<Integer>>();
 	private static ArrayList<ArrayList<Integer>> listeQuantites = new ArrayList<ArrayList<Integer>>();
 	
