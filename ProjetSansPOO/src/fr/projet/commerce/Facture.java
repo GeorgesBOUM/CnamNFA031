@@ -73,7 +73,11 @@ public class Facture {
 	 */
 	public static void afficher() {
 		// TODO Question 4.5
-
+		System.out.println("_._._._._._._._._._._._._._._._._._._._._._._._");
+		for (int i = 0; i < listeProduits.size(); i++) {
+			afficherFacture(i);
+		}
+		System.out.println("_._._._._._._._._._._._._._._._._._._._._._._._");
 	}
 
 }
