@@ -1,12 +1,14 @@
 package fr.projet.commerce;
 
+import java.util.ArrayList;
+
 public class Facture {
 	/*
 	 * Question 4.1 : D�finir un facturier (voir sujet)
 	 * tab[i][j] : i --> facture et j --> ligne facture
 	 */
-	private static int tabProduits [][] = {};
-	private static int tabQuantites [][] = {};
+	private static ArrayList<ArrayList<Integer>> listeProduits = new ArrayList<ArrayList<Integer>>();
+	private static ArrayList<ArrayList<Integer>> listeQuantites = new ArrayList<ArrayList<Integer>>();
 	
 	public static void main(String[] args) {
 		int numFacture = nouvelleFacture();
@@ -26,31 +28,29 @@ public class Facture {
 
 	private static int nouvelleFacture() {
 		// TODO Question 4.2
-		int produits [][] = new int [tabProduits.length + 1][];
-		int quantites [][] = new int [tabQuantites.length + 1][];
-		if (tabProduits.length > 0) {
-			for (int i = 0; i < tabProduits.length; i++) {
-				for (int j = 0; j < tabProduits[i].length; j++) {
-					produits[i][j] = tabProduits[i][j];
-				}
-			}
-			for (int i = 0; i < tabQuantites.length; i++) {
-				for (int j = 0; j < tabQuantites[i].length; j++) {
-					quantites[i][j] = tabQuantites[i][j];
-				}
-			}
-			tabProduits = produits;
-			tabQuantites = quantites;
-		} else {
-			
-		}
-		return produits.length;
+		ArrayList<Integer> produit = new ArrayList<Integer>();
+		ArrayList<Integer> quantite = new ArrayList<Integer>();
+		listeProduits.add(produit);
+		listeQuantites.add(quantite);
+		return listeProduits.size() - 1;
 	}
 
-	private static void ajouterProduit(int numFacture, int numProduit,
-			int quantite) {
+	private static void ajouterProduit(int numFacture, int numProduit, int quantite) {
 		// TODO Question 4.3
-
+		int len = tabProduits[numFacture].length;
+		if (len == 0) {
+			tabProduits[numFacture][len] = numProduit;
+			tabQuantites[numFacture][len] = quantite;
+		} else {
+			tabProduits[numFacture][len - 1] = numProduit;
+			tabQuantites[numFacture][len - 1] = quantite;
+		}
+		
+		try {
+			
+		} catch (ArrayIndexOutOfBoundsException e) {
+			// TODO: handle exception
+		}	
 	}
 
 	/**
