@@ -7,6 +7,7 @@ public class Facture {
 	 * Question 4.1 : D�finir un facturier (voir sujet)
 	 * tab[i][j] : i --> facture et j --> ligne facture
 	 */
+	private static ArrayList<Integer> listeFacturesArrayList = new ArrayList<Integer>();
 	private static ArrayList<ArrayList<Integer>> listeProduits = new ArrayList<ArrayList<Integer>>();
 	private static ArrayList<ArrayList<Integer>> listeQuantites = new ArrayList<ArrayList<Integer>>();
 	
@@ -50,7 +51,21 @@ public class Facture {
 	 */
 	private static void afficherFacture(int numFacture) {
 		// TODO Question 4.4
-
+		double totalLigne = 0.0;
+		double totalGeneral = 0.0;
+		int numeroProduit;
+		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+		System.out.println("Facture n°" + numFacture);
+		System.out.println("-----------------------------");
+		for (int i = 0; i < listeProduits.get(numFacture).size(); i++) {
+			numeroProduit = listeProduits.get(numFacture).get(i);
+			totalLigne = Catalogue.getPrix(numeroProduit) * listeQuantites.get(numFacture).get(i);
+			System.out.println(Catalogue.getNom(numeroProduit) + " (" + 
+					Catalogue.getPrix(numeroProduit) + "€ par pièce) " + " x " + 
+					listeQuantites.get(numFacture).get(i) + " = " + totalLigne);
+			totalGeneral += totalLigne;
+		}
+		System.out.println("Montant total : " + totalGeneral);
 	}
 
 	/**
