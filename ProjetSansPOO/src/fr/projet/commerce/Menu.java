@@ -14,12 +14,19 @@ public class Menu {
 			clavier.nextLine();
 			switch (choix) {
 			case 1:
+				System.out.println("Afficher un produit");
 				System.out.print("Entrer le nom du produit: ");
-				String nom = clavier.nextLine();
-				Menu.afficheProduit(nom);
+				String nomProduit = clavier.nextLine();
+				Menu.afficheProduit(nomProduit);
 				break;
 			case 2:
-				System.out.println("ajouter produit");
+				System.out.println("Ajouter un produit au catalogue");
+				System.out.print("Entrer le nom du nouveau produit: ");
+				String nomNouveauProduit = clavier.nextLine();
+				System.out.print("Entrer le prix du nouveau produit: ");
+				double prixNouveauProduit = clavier.nextDouble();
+				clavier.nextLine();
+				Catalogue.ajouter(nomNouveauProduit, prixNouveauProduit);
 				break;
 			case 3:
 				System.out.println("afficher catalogue");
@@ -38,13 +45,14 @@ public class Menu {
 			default:
 				break;
 			}
-		} while (choix != 7);		
+		} while (choix != 7);	
+		clavier.close();
 	}
 	
 	public static void afficheMenu() {
 		System.out.println("---------------- MENU ----------------");
 		System.out.println("1 - afficher un produit");
-		System.out.println("2 - ajouter un produit");
+		System.out.println("2 - ajouter un produit au catalogue");
 		System.out.println("3 - afficher le catalogue");
 		System.out.println("4 - afficher une facture");
 		System.out.println("5 - ajouter une facture");
