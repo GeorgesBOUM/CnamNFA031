@@ -59,7 +59,8 @@ public class Menu {
 				
 				break;
 			case 6:
-				System.out.println("afficher le facturier");
+				System.out.println("Afficher tout le facturier");
+				Facture.afficher();
 				break;
 			case 7:
 				sortir();
