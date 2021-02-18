@@ -26,8 +26,12 @@ public class Facture {
 		afficher();
 
 	}
-
-	private static int nouvelleFacture() {
+	
+	/**
+	 * Retourne le numéro de la nouvelle facture
+	 * @return numéro Facture
+	 */
+	public static int nouvelleFacture() {
 		// TODO Question 4.2
 		ArrayList<Integer> produit = new ArrayList<Integer>();
 		ArrayList<Integer> quantite = new ArrayList<Integer>();
@@ -36,9 +40,13 @@ public class Facture {
 		return listeProduits.size() - 1;
 	}
 
-	private static void ajouterProduit(int numFacture, int numProduit, int quantite) {
-		listeProduits.get(numFacture).add(numProduit);
-		listeQuantites.get(numFacture).add(quantite);
+	public static void ajouterProduit(int numFacture, int numProduit, int quantite) {
+		if (numProduit < 0 || numProduit >= Catalogue.tailleCatalogue()) {
+			System.out.println("Référence inexistante au catalogue");
+		} else {
+			listeProduits.get(numFacture).add(numProduit);
+			listeQuantites.get(numFacture).add(quantite);
+		}
 	}
 
 	/**

@@ -40,6 +40,7 @@ public class Menu {
 				break;
 			case 5:
 				System.out.println("ajouter une facture");
+				
 				break;
 			case 6:
 				System.out.println("afficher le facturier");

@@ -73,8 +73,9 @@ public class Catalogue {
 		// TODO Question 3.2
 		int length = tabNoms.length;
 		System.out.println("--------------------------");
+		System.out.println("NumProduit => " + " NomProduit => " + " Prix");
 		for (int i = 0; i < length; i++) {
-			System.out.println(tabNoms[i] + " = " + tabPrix[i] + "€");
+			System.out.println(i + " => " + tabNoms[i] + " => " + tabPrix[i] + "€");
 		}
 		System.out.println("--------------------------");
 	}
@@ -135,5 +136,13 @@ public class Catalogue {
 			i++;
 		} while (numero == -1 && i < tabNoms.length);
 		return numero;
+	}
+	
+	/**
+	 * Retourne la taille(nombre d'éléments) du catalogue
+	 * @return
+	 */
+	public static int tailleCatalogue() {
+		return tabNoms.length;
 	}
 }
