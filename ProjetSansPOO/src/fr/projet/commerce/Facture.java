@@ -49,7 +49,7 @@ public class Facture {
 	 * @param numFacture
 	 *            num�ro de la facture
 	 */
-	private static void afficherFacture(int numFacture) {
+	public static void afficherFacture(int numFacture) {
 		// TODO Question 4.4
 		double totalLigne = 0.0;
 		double totalGeneral = 0.0;

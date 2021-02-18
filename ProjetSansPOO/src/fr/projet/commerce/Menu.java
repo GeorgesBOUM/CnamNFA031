@@ -34,6 +34,9 @@ public class Menu {
 				break;
 			case 4:
 				System.out.println("Afficher une facture");
+				System.out.print("Entrer le numéro de la facture à afficher: ");
+				int numFacture = clavier.nextInt();
+				Facture.afficherFacture(numFacture);
 				break;
 			case 5:
 				System.out.println("ajouter une facture");
