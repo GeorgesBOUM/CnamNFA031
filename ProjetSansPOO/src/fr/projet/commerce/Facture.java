@@ -16,7 +16,7 @@ public class Facture {
 		ajouterProduit(numFacture, 0, 10);
 		ajouterProduit(numFacture, 3, 2);
 		afficherFacture(numFacture);
-
+		
 		numFacture = nouvelleFacture();
 		ajouterProduit(numFacture, 1, 1);
 		ajouterProduit(numFacture, 0, 5);
@@ -54,18 +54,22 @@ public class Facture {
 		double totalLigne = 0.0;
 		double totalGeneral = 0.0;
 		int numeroProduit;
-		System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
-		System.out.println("Facture n°" + numFacture);
-		System.out.println("-----------------------------");
-		for (int i = 0; i < listeProduits.get(numFacture).size(); i++) {
-			numeroProduit = listeProduits.get(numFacture).get(i);
-			totalLigne = Catalogue.getPrix(numeroProduit) * listeQuantites.get(numFacture).get(i);
-			System.out.println(Catalogue.getNom(numeroProduit) + " (" + 
-					Catalogue.getPrix(numeroProduit) + "€ par pièce) " + " x " + 
-					listeQuantites.get(numFacture).get(i) + " = " + totalLigne);
-			totalGeneral += totalLigne;
+		if (listeProduits.isEmpty() || numFacture < 0) {
+			System.out.println("Facture inexistante");
+		} else {
+			System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+			System.out.println("Facture n°" + numFacture);
+			System.out.println("-----------------------------");
+			for (int i = 0; i < listeProduits.get(numFacture).size(); i++) {
+				numeroProduit = listeProduits.get(numFacture).get(i);
+				totalLigne = Catalogue.getPrix(numeroProduit) * listeQuantites.get(numFacture).get(i);
+				System.out.println(Catalogue.getNom(numeroProduit) + " (" + 
+						Catalogue.getPrix(numeroProduit) + "€ par pièce) " + " x " + 
+						listeQuantites.get(numFacture).get(i) + " = " + totalLigne);
+				totalGeneral += totalLigne;
+			}
+			System.out.println("Montant total : " + totalGeneral);
 		}
-		System.out.println("Montant total : " + totalGeneral);
 	}
 
 	/**

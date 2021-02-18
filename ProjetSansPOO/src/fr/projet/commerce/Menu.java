@@ -33,7 +33,7 @@ public class Menu {
 				Catalogue.afficher();
 				break;
 			case 4:
-				System.out.println("afficher une facture");
+				System.out.println("Afficher une facture");
 				break;
 			case 5:
 				System.out.println("ajouter une facture");
