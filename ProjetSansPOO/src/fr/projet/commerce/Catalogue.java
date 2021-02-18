@@ -125,12 +125,12 @@ public class Catalogue {
 	 * @return le num�ro du produit dans le catalogue si le produit est pr�sent
 	 *         sinon -1.
 	 */
-	public static int chercher(String nom) {
+	public static int chercher(String nomProduit) {
 		// TODO Question 3.4
 		int numero = -1;
 		int i = 0;
 		do {
-			if (tabNoms[i].equals(nom)) {
+			if (tabNoms[i].equals(nomProduit)) {
 				numero = i;
 			}
 			i++;
@@ -144,5 +144,14 @@ public class Catalogue {
 	 */
 	public static int tailleCatalogue() {
 		return tabNoms.length;
+	}
+	
+	public static boolean chercherParNumero(int numProduit) {
+		if (numProduit < 0 || numProduit >= tabNoms.length) {
+			System.out.println("Référence " + numProduit + " inexistante");
+			return false;
+		} else {
+			return true;
+		}
 	}
 }

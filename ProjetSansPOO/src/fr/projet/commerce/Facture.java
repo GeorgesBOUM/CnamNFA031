@@ -41,12 +41,10 @@ public class Facture {
 	}
 
 	public static void ajouterProduit(int numFacture, int numProduit, int quantite) {
-		if (numProduit < 0 || numProduit >= Catalogue.tailleCatalogue()) {
-			System.out.println("Référence inexistante au catalogue");
-		} else {
+		if (Catalogue.chercherParNumero(numProduit)) {
 			listeProduits.get(numFacture).add(numProduit);
 			listeQuantites.get(numFacture).add(quantite);
-		}
+		} 
 	}
 
 	/**

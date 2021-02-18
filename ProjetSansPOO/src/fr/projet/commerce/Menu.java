@@ -39,7 +39,23 @@ public class Menu {
 				Facture.afficherFacture(numFacture);
 				break;
 			case 5:
-				System.out.println("ajouter une facture");
+				System.out.println("Ajouter une facture");
+				int numNouvelleFacture = Facture.nouvelleFacture();
+				int numProduitAchete, quantite;
+				String reponse;
+				do {
+					System.out.println("Ajouter un produit à votre facture");
+					System.out.print("Numéro du produit: ");
+					numProduitAchete = clavier.nextInt();
+					if (Catalogue.chercherParNumero(numProduitAchete)) {
+						System.out.print("combien de " + Catalogue.getNom(numProduitAchete) + " voulez vous?");
+						quantite = clavier.nextInt();
+						clavier.nextLine();
+						Facture.ajouterProduit(numNouvelleFacture, numProduitAchete, quantite);
+					} 
+					System.out.println("Voulez vous entrer un autre numéro produit? (oui / non) ");
+					reponse = clavier.nextLine();
+				} while (reponse.equals("oui"));
 				
 				break;
 			case 6:
