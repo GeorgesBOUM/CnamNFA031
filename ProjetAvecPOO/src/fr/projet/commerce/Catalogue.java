@@ -8,7 +8,7 @@ public final class Catalogue {
 	private ArrayList<Produit> listeDeProduits;
 	
 	public void afficherCatalogue() {
-		if (listeDeProduits == null) {
+		if (listeDeProduits.isEmpty()) {
 			System.out.println("Catalogue vide");
 		} else {
 			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
@@ -38,8 +38,9 @@ public final class Catalogue {
 			if (produit.getNom().equals(nom)) {
 				trouve = true;
 				produitOptional = Optional.of(produit);
-			} else {
-				System.out.println("Catalogue vide");
+			} 
+			if (!trouve) {
+				System.out.println("Produit non catalogué");
 			}
 		}
 		return produitOptional;
