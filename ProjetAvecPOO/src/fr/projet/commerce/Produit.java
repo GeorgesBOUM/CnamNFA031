@@ -16,4 +16,8 @@ public class Produit {
 	public double getPrix() {
 		return prix;
 	}
+	
+	public String toString() {
+		return nom + " = " + prix + "€";
+	}
 }
