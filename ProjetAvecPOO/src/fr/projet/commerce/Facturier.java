@@ -17,5 +17,16 @@ public final class Facturier {
 		}
 	}
 	
-	
+	public void afficherFacturier() {
+		String affichage = "";
+		if (listeDesFactures.isEmpty()) {
+			System.out.println("Facturier vide");
+		} else {
+			for (Facture facture : listeDesFactures) {
+				affichage += facture.toString();
+			}
+			affichage += "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+		}
+		System.out.println(affichage);
+	}
 }
