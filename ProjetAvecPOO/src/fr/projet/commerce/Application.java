@@ -41,7 +41,8 @@ public final class Application {
 			break;
 			
 		case 3:
-			System.out.print("Saisir le nom du produit: ");
+			System.out.println("Affichage d'un produit");
+			System.out.print("Saisir le nom du produit à afficher: ");
 			nomProduit = clavier.nextLine();
 			catalogue.afficherProduit(nomProduit);
 			break;
