@@ -8,4 +8,14 @@ public final class Facturier {
 	public void ajouterFacture(Facture facture) {
 		listeDesFactures.add(facture);
 	}
+	
+	public void afficherFacture(int numeroFacture) {
+		if (numeroFacture < listeDesFactures.size()) {
+			System.out.println(listeDesFactures.get(numeroFacture).toString());
+		} else {
+			System.out.println("Facture inexistante ");
+		}
+	}
+	
+	
 }
