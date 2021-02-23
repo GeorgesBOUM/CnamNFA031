@@ -45,4 +45,11 @@ public final class Catalogue {
 		}
 		return produitOptional;
 	}
+	
+	public void afficherProduit(String nom) {
+		Optional<Produit> produitOptional = chercherProduit(nom);
+		if (produitOptional.isPresent()) {
+			produitOptional.get().toString();
+		}
+	}
 }
