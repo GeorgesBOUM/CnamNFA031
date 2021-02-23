@@ -17,4 +17,13 @@ public final class Catalogue {
 			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 		}
 	}
+	
+	public void ajouterProduit(String nom, double prix) {
+		Produit produit = chercherProduit(nom);
+		if (produit == null) {
+			listeDeProduits.add(new Produit(nom, prix));
+		} else {
+			System.out.println("Ce produit est déjà catalogué");
+		}
+	}
 }
