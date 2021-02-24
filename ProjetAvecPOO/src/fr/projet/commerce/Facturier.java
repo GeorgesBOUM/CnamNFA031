@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public final class Facturier {
 	private ArrayList<Facture> listeDesFactures;
 	
+	public Facturier() {
+		listeDesFactures = new ArrayList<Facture>();
+	}
+	
 	public void ajouterFacture(Facture facture) {
 		listeDesFactures.add(facture);
 	}
