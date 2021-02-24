@@ -6,6 +6,10 @@ import java.util.Iterator;
 public final class Facture {
 	private ArrayList<LigneFacture> listeDesLignes;
 	
+	public Facture() {
+		listeDesLignes = new ArrayList<LigneFacture>();
+	}
+	
 	public void ajouterLigne(Produit p, int quantite) {
 		listeDesLignes.add(new LigneFacture(p, quantite));
 	}
