@@ -7,6 +7,10 @@ import java.util.Optional;
 public final class Catalogue {
 	private ArrayList<Produit> listeDeProduits;
 	
+	public Catalogue() {
+		listeDeProduits = new ArrayList<Produit>();
+	}
+	
 	public void afficherCatalogue() {
 		if (listeDeProduits.isEmpty()) {
 			System.out.println("Catalogue vide");
