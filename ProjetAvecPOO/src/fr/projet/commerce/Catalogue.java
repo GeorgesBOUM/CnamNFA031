@@ -40,9 +40,6 @@ public final class Catalogue {
 			if (produit.getNom().equals(nom)) {
 				trouve = true;
 				produitOptional = Optional.of(produit);
-			} 
-			if (!trouve) {
-				System.out.println("Produit non catalogué");
 			}
 		}
 		return produitOptional;
