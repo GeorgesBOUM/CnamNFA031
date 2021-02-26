@@ -26,11 +26,9 @@ public final class Catalogue {
 	
 	public void ajouterProduit(String nom, double prix) {
 		Optional<Produit> produit = chercherProduit(nom);
-		if (produit.isPresent()) {
+		if (!produit.isPresent()) {
 			listeDeProduits.add(new Produit(nom, prix));
-		} else {
-			System.out.println("Ce produit est déjà catalogué");
-		}
+		} 
 	}
 	
 	public Optional<Produit> chercherProduit(String nom) {
