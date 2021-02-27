@@ -8,7 +8,8 @@ public final class Application {
 	public static void main(String[] args) {
 		Scanner clavier = new Scanner(System.in);
 		String nomProduit;
-		int choix, prixProduit, numFacture;
+		int choix, numFacture;
+		double prixProduit;
 		// Pour les "tests", nous créons un catalogue et y ajoutons
 		// quelques produits
 		Catalogue catalogue = new Catalogue();
@@ -37,7 +38,7 @@ public final class Application {
 				System.out.print("Saisir le nom du produit: ");
 				nomProduit = clavier.nextLine();
 				System.out.print("Saisir le prix du produit: ");
-				prixProduit = clavier.nextInt();
+				prixProduit = clavier.nextDouble();
 				clavier.nextLine();
 				catalogue.ajouterProduit(nomProduit, prixProduit);
 				break;
