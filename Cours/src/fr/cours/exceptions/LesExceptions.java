@@ -24,7 +24,7 @@ public class LesExceptions {
 	
 	public static void main(String[] args) {
         System.out.println( "BEGIN main" );
-        
+        method1();
         System.out.println( "END main" );
     }
 }
