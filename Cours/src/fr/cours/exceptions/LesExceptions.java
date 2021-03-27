@@ -2,7 +2,7 @@ package fr.cours.exceptions;
 
 public class LesExceptions {
 	
-    public static void method3() throws Exception{
+    public static void method3() throws Exception {
         System.out.println( "BEGIN method3" );
         int divisor = (int) (Math.random() * 3);
         if (divisor == 0) {
@@ -14,13 +14,13 @@ public class LesExceptions {
         System.out.println( "END method3" );
     }
 
-    public static void method2() {
+    public static void method2() throws Exception {
         System.out.println( "BEGIN method2" );
         method3();
         System.out.println( "END method2" );
     }
     
-    public static void method1() {
+    public static void method1() throws Exception {
         System.out.println( "BEGIN method1" );
         method2();
         System.out.println( "END method1" );
