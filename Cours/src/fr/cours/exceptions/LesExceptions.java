@@ -2,11 +2,15 @@ package fr.cours.exceptions;
 
 public class LesExceptions {
 	
-    public static void method3() {
+    public static void method3() throws Exception{
         System.out.println( "BEGIN method3" );
         int divisor = (int) (Math.random() * 3);
-        int value = 1 / divisor;
-        System.out.println( "Value == " + value );
+        if (divisor == 0) {
+			throw new Exception("divisor cannot be nul");
+		} else {
+			int value = 1 / divisor;
+	        System.out.println( "Value == " + value );
+		}
         System.out.println( "END method3" );
     }
 
