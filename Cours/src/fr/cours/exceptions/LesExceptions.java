@@ -32,12 +32,12 @@ public class LesExceptions {
 	
 	public static void main(String[] args) {
         System.out.println( "BEGIN main" );
-        method1();
-//        try {
-//        	method1();
-//		} catch (Exception e) {
-//			System.out.println("Division by zero");
-//		}
+//        method1();
+        try {
+        	method1();
+		} catch (Exception e) {
+			System.out.println("Division by zero");
+		}
         System.out.println( "END main" );
     }
 }
