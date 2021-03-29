@@ -12,6 +12,9 @@ public class RationalApp {
 
         Rational r3 = new Rational( 1, 3 );
         System.out.printf( "[%d/%d]\n", r3.getNumerator(), r3.getDenominator() );
+        
+        Rational r4 = new Rational( 2, 5 );
+        System.out.printf( "[%d/%d]\n", r4.getNumerator(), r4.getDenominator() );
     
 	    
 	}
