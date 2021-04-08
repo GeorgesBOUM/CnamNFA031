@@ -11,5 +11,16 @@ public class DateTemps {
 		
 		LocalDate aujourdhui = LocalDate.now();
 		System.out.println("Date courante: " + aujourdhui);
+		
+		int annee = aujourdhui.getYear();
+		int mois = aujourdhui.getMonthValue();
+		int jour = aujourdhui.getDayOfMonth();
+		System.out.println(
+				"Date: " + aujourdhui + "\n" +
+				"Jour: " + jour + "\n" +
+				"Mois: " + mois + "\n" +
+				"Année: " + annee + "\n"
+				);
+		
 	}
 }
