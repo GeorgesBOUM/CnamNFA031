@@ -21,6 +21,7 @@ public class DateTemps {
 				"Mois: " + mois + "\n" +
 				"Année: " + annee + "\n"
 				);
-		
+		String bissextile = (aujourdhui.isLeapYear()) ? " est une année bissextile" : " n'est pas une année bissextile";
+		System.out.println(annee + bissextile);
 	}
 }
